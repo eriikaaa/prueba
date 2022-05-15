@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+    <link rel="stylesheet" href="css/presupuesto.css">
+</head>
+
+<body>
+    <section>
+        
+        <article>
+            <input type="number" id="presupuesto">
+            <input type="button" value="Evaluar" onclick="Evaluar()">    
+            <script type="text/javascript">       
+
+                function Evaluar(){
+             
+                 var presupuestoA = document.getElementById('presupuesto').value;
+                 var dermatologia,traumatologia, pediatria;
+             
+                 var presupuesto = document.getElementById("total");
+                 var dermaV = document.getElementById("dermaV");
+                 var TraumaV  = document.getElementById("TraumaV");
+                 var PediaV  = document.getElementById("PediaV");
+             
+                 dermatologia = presupuestoA * 0.40;
+                 traumatologia = presupuestoA * 0.35;
+                 pediatria = presupuestoA * 0.25;
+             
+                 presupuesto.innerHTML = presupuestoA
+                 dermaV.innerHTML = dermatologia
+                 TraumaV.innerHTML = traumatologia
+                 PediaV.innerHTML = pediatria
+             }    
+            </script> 
+          <table>
+            <tr><th>Cantidad asignado al Hospital</th><td id="total"></td></tr>
+            <tr><th>Area</th><th>Porcentaje del presupuesto</th><th>Valor asignado</th></tr>
+            <tr><td>Dermatologia</td><td>40%</td><td id="dermaV"></td></tr>
+            <tr><td>traumatologia</td><td>35%</td><td id="TraumaV"></td></tr>
+            <tr><td>Pediatria</td><td>35%</td><td id="PediaV"></td></tr>
+          </table>  
+        </article>
+    </section>
+</body>
+</html>
